@@ -1,0 +1,66 @@
+# Contributing
+
+Obrigado por contribuir com o Mission Control.
+
+## Princípios
+
+- Manter legibilidade para humanos e agentes.
+- Evitar complexidade prematura no MVP.
+- Tratar PRD e arquitetura como fonte de verdade.
+
+## Antes de codar
+
+1. Leia:
+   - `docs/kick-off/mission-control-prd-v2.md`
+   - `docs/kick-off/mission-control-architecture.md`
+2. Se a mudança altera comportamento/contrato, atualize documentação no mesmo PR.
+3. Se for decisão arquitetural, registre em ADR/changelog do documento de arquitetura.
+
+## Fluxo de branches
+
+- A branch `main` é protegida.
+- Crie uma branch para cada mudança:
+  - `feat/<descricao-curta>`
+  - `fix/<descricao-curta>`
+  - `docs/<descricao-curta>`
+  - `chore/<descricao-curta>`
+
+## Commits
+
+Use mensagens objetivas (preferência por Conventional Commits):
+
+- `feat: ...`
+- `fix: ...`
+- `docs: ...`
+- `chore: ...`
+- `refactor: ...`
+- `test: ...`
+
+## Pull Requests
+
+Checklist mínimo:
+
+- [ ] Escopo pequeno e focado
+- [ ] Documentação atualizada (quando aplicável)
+- [ ] Sem segredos/tokens no código
+- [ ] Mudanças validadas localmente
+- [ ] PR descreve o que mudou, por que mudou e riscos
+
+## Diretrizes de código (resumo)
+
+Back-end Go:
+
+- Arquivos curtos (meta: até ~200 linhas)
+- Nenhuma lógica de negócio em handlers
+- Sem queries SQL fora de `db/queries/`
+- Nunca ignorar `error`
+
+Front-end:
+
+- Componentes/hook em arquivos dedicados
+- Lógica de dados em hooks, não em componentes de apresentação
+
+## Segurança
+
+- Nunca commite `.env` ou credenciais.
+- Tokens e chaves sempre via variáveis de ambiente.
