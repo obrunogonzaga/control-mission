@@ -19,7 +19,13 @@ Obrigado por contribuir com o Mission Control.
 ## Fluxo de branches
 
 - A branch `main` é protegida.
-- Crie uma branch para cada mudança:
+- É obrigatório trabalhar em branch para qualquer agente (Codex, Claude, OpenClaw e humanos).
+- Nunca commitar direto na `main`.
+- Padrão recomendado por agente:
+  - `codex/onda-<N>-<slug>`
+  - `claude/onda-<N>-<slug>`
+  - `agent/<nome>/onda-<N>-<slug>`
+- Tipos alternativos permitidos para contribuições humanas:
   - `feat/<descricao-curta>`
   - `fix/<descricao-curta>`
   - `docs/<descricao-curta>`
@@ -45,6 +51,17 @@ Checklist mínimo:
 - [ ] Sem segredos/tokens no código
 - [ ] Mudanças validadas localmente
 - [ ] PR descreve o que mudou, por que mudou e riscos
+- [ ] Status da onda atualizado em `docs/kick-off/mission-control-wave-plan.md`
+- [ ] Entrada adicionada no `CHANGELOG.md`
+- [ ] Se houve mudança de contrato/arquitetura, PRD e arquitetura foram atualizados
+
+## Fechamento de ciclo (obrigatório)
+
+Ao fechar um ciclo de trabalho (PR pronto para review), atualize:
+
+1. `docs/kick-off/mission-control-wave-plan.md` (status da onda e registro de ciclo)
+2. `CHANGELOG.md` (entrada da entrega)
+3. docs funcionais/técnicos impactados (`mission-control-prd-v2.md`, `mission-control-architecture.md`, etc.)
 
 ## Diretrizes de código (resumo)
 

@@ -8,6 +8,8 @@ Projeto em fase de kick-off com documentação consolidada.
 
 - PRD: [`docs/kick-off/mission-control-prd-v2.md`](docs/kick-off/mission-control-prd-v2.md)
 - Arquitetura técnica: [`docs/kick-off/mission-control-architecture.md`](docs/kick-off/mission-control-architecture.md)
+- Plano de ondas: [`docs/kick-off/mission-control-wave-plan.md`](docs/kick-off/mission-control-wave-plan.md)
+- Changelog: [`CHANGELOG.md`](CHANGELOG.md)
 - Protótipos de UI:
   - [`docs/kick-off/prototipos-ui/mission-control-ui.jsx`](docs/kick-off/prototipos-ui/mission-control-ui.jsx)
   - [`docs/kick-off/prototipos-ui/mission-control-tasks.jsx`](docs/kick-off/prototipos-ui/mission-control-tasks.jsx)
