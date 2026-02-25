@@ -148,7 +148,7 @@ Checklist de encerramento:
 | Onda | Status | Responsavel atual | Inicio | Fim | Observacoes |
 |---|---|---|---|---|---|
 | 0 | Done | Bruno | 2026-02-24 | 2026-02-24 | Repo criado, branch protection e docs iniciais |
-| 1 | Not Started | - | - | - | - |
+| 1 | Done | Codex | 2026-02-24 | 2026-02-24 | API Go + SQLite + SSE implementada com endpoints core e migrations iniciais |
 | 2 | Not Started | - | - | - | - |
 | 3 | Not Started | - | - | - | - |
 | 4 | Not Started | - | - | - | - |
@@ -161,3 +161,4 @@ Checklist de encerramento:
 | Data | Onda | Branch | Autor | Resultado |
 |---|---|---|---|---|
 | 2026-02-24 | 0 | `codex/wave-plan-and-agent-rules` | Codex | Plano em ondas criado, regras de branch e fechamento de ciclo adicionadas |
+| 2026-02-24 | 1 | `codex/onda-1-api-core` | Codex | Backend Onda 1 entregue com API core (`health/tasks/agents/activity/dashboard`) + SQLite (`modernc`) + migrations + stream SSE (`/api/stream`) |

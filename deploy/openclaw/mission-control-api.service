@@ -1,0 +1,23 @@
+[Unit]
+Description=Mission Control API
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=missionctl
+Group=missionctl
+WorkingDirectory=/opt/mission-control/api
+EnvironmentFile=/etc/mission-control/api.env
+ExecStart=/opt/mission-control/api/mission-control-api
+Restart=always
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=full
+ReadWritePaths=/var/lib/mission-control
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

@@ -33,17 +33,31 @@ Projeto em fase de kick-off com documentação consolidada.
 
 ## Setup de Desenvolvimento
 
-O código-fonte da aplicação (apps/web e apps/api) será adicionado nas próximas etapas.
+Backend da Onda 1 disponível em `apps/api`.
 
-Quando o scaffold estiver disponível:
-
-1. Copie `.env.example` para `.env`
-2. Suba tudo com `./start.sh`
+1. Copie `.env.example` para `.env` (opcional, para customizar variáveis).
+2. API:
+   - `cd apps/api`
+   - `go mod tidy`
+   - `make dev` (sobe em `http://localhost:3001`)
 
 Alternativa manual:
 
-- API: `go run ./apps/api`
-- Web: `npm run dev` em `apps/web`
+- API (a partir da raiz): `go run ./apps/api`
+
+Rotas core implementadas na Onda 1:
+
+- `GET /health`
+- `GET /api/dashboard/summary`
+- `GET|POST|PATCH|DELETE /api/tasks`
+- `GET|POST|PATCH /api/agents`
+- `GET|POST /api/activity`
+- `GET /api/stream`
+
+## Deploy no Servidor
+
+- Guia de deploy da API para servidor OpenClaw: [`docs/deploy/openclaw-server-api.md`](docs/deploy/openclaw-server-api.md)
+- Kit de automacao (installer, smoke test, service template e nginx example): `deploy/openclaw/`
 
 ## Integração com OpenClaw
 
